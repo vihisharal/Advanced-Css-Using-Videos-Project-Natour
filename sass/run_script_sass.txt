@@ -1,0 +1,1 @@
+compile sass code into css use script written in package.json pick script name and 'npm run script-name'

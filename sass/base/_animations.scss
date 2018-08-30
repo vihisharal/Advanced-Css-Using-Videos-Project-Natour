@@ -1,0 +1,70 @@
+/*animate design*/
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem) rotate(-50deg);
+    }
+
+    80% {
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem) rotate(50deg);
+    }
+
+    80% {
+        transform: translateX(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes rotationClock {
+    0% {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+
+    50% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}

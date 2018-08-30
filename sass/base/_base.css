@@ -1,0 +1,20 @@
+/*universal selector*/
+/* line 3, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/natours/sass/base/_base.scss */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* line 11, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/natours/sass/base/_base.scss */
+html {
+  font-size: 62.5%;
+  /*if you want size=10px and let x=16px default them % : (10/16)*100=0.625*100=62.5%*/
+  /* now 1rem = 10px */ }
+
+/* line 17, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/natours/sass/base/_base.scss */
+body {
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=_base.css.map */

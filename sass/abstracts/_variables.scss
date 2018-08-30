@@ -1,0 +1,28 @@
+/*color defination*/
+$color-primary: #7ed56f; //light_green
+$color-primary-light: #8dffb4; //medium_green
+$color-primary-dark: #28b483; //dark_green
+$color-grey-dark:#777;
+$color-grey-light-1:#e6e6e6;
+$color-grey-light-2:#d9d9d9;
+$color-grey-dark-1:#999;
+$color-grey-dark-2:#333;
+$color-white:#fff;
+$color-black:#000;
+
+$color-secondary-light:#ffb900;
+$color-secondary-dark:#ff7730;
+
+$color-tertiary-light:#2998ff;
+$color-tertiary-dark:#5643fa;
+
+/*Grid*/ 
+
+$grid-width:114rem;
+$gutter-vertical:5rem; 
+$gutter-vertical-small:4rem;
+/*grid element gap in multiple rows i.e. margin top/buttom */
+$gutter-horizontal:7rem; /*grid element gap in one row*/
+
+//font-size
+$default-font-size:1.6rem;

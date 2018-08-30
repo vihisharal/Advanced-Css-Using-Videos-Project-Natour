@@ -1,0 +1,62 @@
+.header {
+    height: 95vh;
+    background-image: -webkit-linear-gradient(left top, rgba($color-primary, 0.7), rgba($color-primary-dark, 0.7)), url(../img/hero.jpg);
+    background-image: linear-gradient( to right bottom,
+    rgba($color-primary, 0.7),
+    rgba($color-primary-dark, 0.7)),
+    url(../img/hero-small.jpg);
+    background-size: cover;
+    /*to fit element into view port*/
+    background-position: top;
+    /*intresting property try change size browser to seee effect*/
+    position: relative;
+
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        /*topLeft topRight bottomRight bottomLeft*/
+        /*Left to Right is x-axis 0 -> +  */
+        /*Top to Bottom is y-axis 0 -> +  */
+    }
+    /*@media(min-resolution: 192dpi)and(min-width:600px),(min-width:1800px)*/
+    @media only screen and (min-resolution: 192dpi)and(min-width:37.7em),
+    only screen and (-webkit-min-device-pixel-ratio: 2)and(min-width:37.7em),
+    only screen and (min-width:112.5em) {
+        background-image: linear-gradient( to right bottom,
+        rgba($color-secondary-light, 0.7),
+        rgba($color-secondary-dark, 0.7)),
+        url(../img/hero.jpg);
+        height: 80vh;
+    }
+
+    @include respond(tab-land) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 5.5rem;
+        &:hover {
+            -webkit-animation: rotationClock 0.5s ease-out;
+            animation: rotationClock 0.5s ease-out;
+        }
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

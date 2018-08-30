@@ -1,0 +1,68 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//MEDIA QUERY MANAGER
+/*
+ 000px-600px phone
+ 600px-900px tablet portrait
+ 900px-1200px tablet landscape
+ 1200px-1800px desktop
+ 1800px- + big desktop
+*/
+
+@mixin respond-phone {
+    @media(max-width: 600px) {
+        @content
+    }
+    ;
+}
+
+/*
+    BREACKPOINT ARGUMENT CHOICES 
+    -phone max-width=600px /16 =37.5em
+    -tab-port  max-width: 900px/16=56.25rm
+    -tab-land  max-width: 1200px/16=75em
+    -big-desktops min-width: 1800px/16=112.5em
+1em =16px;
+ORDER:base + typography > genral layout+ grid >page layout >components
+only screen //for device having screen
+*/
+
+@mixin respond($breackpoint) {
+    @if $breackpoint==phone {
+        @media only screen and (max-width: 37.5em) {
+            @content
+        }
+        ;
+    }
+    @if $breackpoint==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+        ;
+    }
+    @if $breackpoint==tab-land {
+        @media only screen and (max-width: 75em) {
+            @content
+        }
+        ;
+    }
+    @if $breackpoint==big-desktop {
+        @media only screen and (min-width: 112.5em) {
+            @content
+        }
+        ;
+    }
+}
